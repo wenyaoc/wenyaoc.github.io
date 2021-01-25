@@ -34,8 +34,8 @@
       <div class="row">
         
         <div class="collapsible full-width">
-          <input id="collapsible-components" type="radio" name="collapsible">
-          <label for="collapsible-components">Language/语言</label>
+          <input id="collapsible-language" type="radio" name="collapsible">
+          <label for="collapsible-language">Language/语言</label>
           <div class="collapsible-body">
             <ul>
             
@@ -55,8 +55,8 @@
         </div>
         <div class="row">
         <div class="collapsible full-width">
-          <input id="collapsible-content" type="radio" name="collapsible">
-          <label for="collapsible-content">Mode</label>
+          <input id="collapsible-mode" type="radio" name="collapsible">
+          <label for="collapsible-mode">Mode</label>
           <div class="collapsible-body">
             <ul>
             
@@ -81,14 +81,31 @@
         </div>
       </div>
 
-      <div class="card" style="width: 10rem;">
+      <div class="card">
         <img src="https://picsum.photos/768" alt="Card example image">
       
         <div class="card-body">
           <h4 class="card-title">My awesome Paper card!</h4>
           <h5 class="card-subtitle">Nice looking subtitle.</h5>
           <p class="card-text">Notice that the card width in this example have been set to 20rem, otherwise it will try to fill the current container/row where the card is.</p>
-          <button>Let me go here!</button>
+          <div class="collapsible full-width">
+            <input id="collapsible-components" type="radio" name="collapsible">
+            <label for="collapsible-components">Language</label>
+            <div class="collapsible-body">
+              <ul>
+              
+                <li>
+                  <a href="/">English</a>
+                </li>
+              
+                <li>
+                  <a href="/chinese">简体中文</a>
+                </li>
+  
+              
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
