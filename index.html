@@ -8,12 +8,102 @@
   <title>home page</title>
 </head>
 <body>
-  <div class="paper container">
-    <div class='section'>
-      <h2>Wenyao Chen</h2>
-      <p>Hi, I'm Wendy. I'm a 2nd year Comp Eng student at UNSW</p>
+
+
+  <div class="sm-12 md-8 col">
+    <div class="paper">
+      <div class="demo-title">
+        <div class="row flex-center">
+          <div class="text-left">
+            <h1>Wenyao Chen</h1>
+            <h3>Hi, I'm Wendy. I'm a 2nd year Comp Eng student at UNSW</h3>
+          </div>
+        </div>
+<!--
+
+
+
+        <div class="row flex-center child-borders">
+<a class="paper-btn margin current" href="/">Get PaperCSS</a>
+<a class="paper-btn margin" href="/docs/">Documentation</a>
+<a class="paper-btn margin" href="/about/">About</a>
+
+<a href="https://github.com/rhyneav/papercss" target="_blank" class="paper-btn margin">Github</a>
+</div>
+
+      </div>
+      <div class="to-top">
+        <a href="#top" class="paper-btn margin">^</a>
+      </div>
+
+
+<div class="section">
+<h2>Get PaperCSS</h2>
+
+
+<h4 id="download">Download</h4>
+
+<p>Download the latest version (1.8.2) using either of the links below. Or
+download an older release via GitHub.</p>
+
+<div class="row flex-spaces text-center">
+<a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.8.2/paper.css">CSS File</a>
+<a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.8.2/paper.min.css">Minified CSS File</a>
+<a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases">GitHub Releases</a>
+</div>
+
+<h4 id="npm">NPM</h4>
+
+<p>PaperCSS is available on NPM, current version 1.8.2. Install with <code>npm install papercss –save</code> and find the CSS in:</p>
+
+<ul>
+<li>node_modules/papercss/dist/paper.css</li>
+<li>node_modules/papercss/dist/paper.min.css</li>
+</ul>
+
+<h4 id="cdn">CDN</h4>
+
+<p>Don’t want to download it? That’s cool. You can just link to PaperCSS via
+<a href="https://unpkg.com/#/" target="_blank">unpkg’s CDN</a>. You can use either:</p>
+
+<ul>
+<li><a href="https://unpkg.com/papercss@1.8.2/dist/paper.css" target="_blank">https://unpkg.com/papercss@1.8.2/dist/paper.css</a></li>
+<li><a href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css" target="_blank">https://unpkg.com/papercss@1.8.2/dist/paper.min.css</a></li>
+</ul>
+
+<p>Here’s a quick snippet to get started with PaperCSS:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content</span><span class="o">=</span><span class="s">"ie=edge"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://unpkg.com/papercss@1.8.2/dist/paper.min.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"paper container"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Some Fresh Title<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is where some content would go.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<h4 id="build-it-yourself">Build it Yourself</h4>
+
+<p>If you’d rather customize things, you can build the CSS yourself via the git repo</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">git clone https://github.com/papercss/papercss.git
+<span class="nb">cd</span> papercss
+npm install
+npm run build</code></pre></div>
+<p>Grab the CSS out of the /dist folder created</p>
+
+<p>You can also go into src/core/_config.scss before building to change around the global styles of your new CSS.</p>
+//-->
+</div>
+
     </div>
-  </div>
+</div>
+
   <nav class="border fixed split-nav">
     <div class="nav-brand">
       <h3><a href="#">Home</a></h3>
