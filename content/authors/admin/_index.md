@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Ph.D student at UNSW CSE 
+role: Ph.D student @ CSE 
 
 # Organizations/Affiliations to show in About widget
 organizations:
