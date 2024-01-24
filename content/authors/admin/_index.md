@@ -28,8 +28,8 @@ organizations:
 bio: hi there
 
 # Interests to show in About widget
-interests:
-  - Programming Language
+# interests:
+#   - Programming Language
 
 # Education to show in About widget
 education:
@@ -114,6 +114,6 @@ social:
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-<!-- 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-{style="text-align: justify;"} -->
+
+I'm a first-year Ph.D student supervised by Prof. Jingling Xue at School of Computer Science and Engineering, University of New South Wales. I am interested in program analysis and programming languages.
+{style="text-align: justify;"}
