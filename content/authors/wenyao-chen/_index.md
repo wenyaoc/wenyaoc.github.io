@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Ph.D student @ CSE 
+role: 3rd Year Ph.D Candidate @ CSE
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -115,5 +115,5 @@ social:
 highlight_name: true
 ---
 
-I'm a first-year Ph.D student supervised by Prof. Jingling Xue at School of Computer Science and Engineering, University of New South Wales. I am interested in program analysis and programming languages.
+I'm a 3rd year Ph.D candidate supervised by Prof. Jingling Xue at School of Computer Science and Engineering, University of New South Wales. I am interested in program analysis and programming languages.
 {style="text-align: justify;"}
