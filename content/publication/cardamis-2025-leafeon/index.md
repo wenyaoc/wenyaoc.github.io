@@ -16,4 +16,5 @@ publishDate: '2025-02-25T13:58:54.847331Z'
 publication_types:
 - article-journal
 publication: '*IEEE Internet of Things Journal*'
+url_pdf: https://ieeexplore.ieee.org/document/10884725
 ---
