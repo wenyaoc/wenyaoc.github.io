@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 3rd Year Ph.D Candidate @ CSE
+role: Ph.D student @ CSE
 
 # Organizations/Affiliations to show in About widget
 organizations:
