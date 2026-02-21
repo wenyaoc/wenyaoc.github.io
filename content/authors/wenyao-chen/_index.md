@@ -37,7 +37,7 @@ education:
     - course: PhD in Computer Science and Engineering
       institution: University of New South Wales, AUS
       year: 2024 - Persent
-    - course: Bachelor in Computer Engineering (Honours)
+    - course: Bachelor in Computer Engineering (Honours Class 1)
       institution: University of New South Wales, AUS
       year: 2019 - 2023
 
