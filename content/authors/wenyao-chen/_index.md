@@ -117,3 +117,6 @@ highlight_name: true
 
 I am a 3rd year Ph.D candidate supervised by Prof. Jingling Xue at the School of Computer Science and Engineering, University of New South Wales. I received my Bachelor degree in Computer Engineering (Honours) at the University of New South Wales in 2023.
 {style="text-align: justify;"}
+
+My research interests lie in program analysis and programming languages.
+{style="text-align: justify;"}
