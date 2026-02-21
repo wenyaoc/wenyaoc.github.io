@@ -39,9 +39,18 @@ sections:
   - block: about.biography
     id: about
     content:
-      title: Biography
+      title: About Me
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: wenyao-chen
+  - block: markdown
+    id: research-interests
+    content:
+      title: Research Interests
+      text: |-
+        - Program Analysis
+        - Programming Languages
+    design:
+      columns: '2'
   # - block: skills
   #   content:
   #     title: Skills
