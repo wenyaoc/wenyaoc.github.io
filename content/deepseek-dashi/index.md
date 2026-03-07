@@ -105,8 +105,10 @@ function buildPrompt() {
   return `现在是 ${currentTime}, 我们投的 ${conference} 文章， 关于 ${area}, 名字叫 ${paperName}. AOE ${releaseDate} 出结果。\n请你用六爻， 帮我分析投稿文章能中的概率`;
 }
 
+const systemPrompt = '你是一位命理大师，精通奇门遁甲，紫微斗数，梅花易数，八字和六爻等，并且熟读周易和易经。';
+
 function generateQuery() {
-  document.getElementById('response-box').textContent = buildPrompt();
+  document.getElementById('response-box').textContent = '[System]\n' + systemPrompt + '\n\n[User]\n' + buildPrompt();
 }
 
 async function submitQuery() {
@@ -132,7 +134,7 @@ async function submitQuery() {
       body: JSON.stringify({
         model: 'deepseek-chat',
         messages: [
-          { role: 'system', content: '你是一位命理大师，精通奇门遁甲，紫微斗数，梅花易数，八字和六爻等，并且熟读周易和易经。' },
+          { role: 'system', content: systemPrompt },
           { role: 'user', content: prompt }
         ],
         temperature: 0.7
