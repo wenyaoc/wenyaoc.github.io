@@ -283,7 +283,7 @@ sections:
   - block: markdown
     content:
       title: ''
-      text: '<p style="text-align:center;font-size:0.85rem;margin-top:2rem;"><a href="chendashi/">Deepseek Dashi</a></p>'
+      text: '<p style="text-align:center;font-size:0.85rem;margin-top:2rem;"><a href="deepseek-dashi/">Deepseek Dashi</a></p>'
     design:
       columns: '1'
 ---
