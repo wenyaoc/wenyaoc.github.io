@@ -1,6 +1,7 @@
 ---
 title: Deepseek Dashi
 type: page
+subtitle: 玄学算paper，仅供娱乐
 ---
 
 <style>
@@ -77,6 +78,7 @@ type: page
 
 <div id="current-time"></div>
 
+<button onclick="generateQuery()">Generate Query</button>
 <button id="submit-btn" onclick="submitQuery()">Submit</button>
 
 <div id="response-box">Response will appear here...</div>
@@ -93,17 +95,24 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 1000);
 
-async function submitQuery() {
-  const apiKey = document.getElementById('api-key').value.trim();
+function buildPrompt() {
   const paperName = document.getElementById('paper-name').value.trim();
   const area = document.getElementById('area').value.trim();
   const releaseDateRaw = document.getElementById('release-date').value;
   const conference = document.getElementById('conference').value.trim();
   const currentTime = formatChinese(new Date());
   const releaseDate = releaseDateRaw ? formatChinese(new Date(releaseDateRaw + 'T00:00:00')) : '';
+  return `现在是 ${currentTime}, 我们投的 ${conference} 文章， 关于 ${area}, 名字叫 ${paperName}. AOE ${releaseDate} 出结果。\n请你用六爻， 帮我分析投稿文章能中的概率`;
+}
 
+function generateQuery() {
+  document.getElementById('response-box').textContent = buildPrompt();
+}
+
+async function submitQuery() {
+  const apiKey = document.getElementById('api-key').value.trim();
   if (!apiKey) { alert('Please enter your DeepSeek API key.'); return; }
-  if (!paperName) { alert('Please enter the paper name.'); return; }
+  if (!document.getElementById('paper-name').value.trim()) { alert('Please enter the paper name.'); return; }
 
   const btn = document.getElementById('submit-btn');
   const responseBox = document.getElementById('response-box');
@@ -111,8 +120,7 @@ async function submitQuery() {
   btn.textContent = 'Loading...';
   responseBox.textContent = 'Waiting for response...';
 
-  const prompt = `现在是 ${currentTime}, 我们投的 ${conference} 文章， 关于 ${area}, 名字叫 ${paperName}. AOE ${releaseDate} 出结果。
-请你用六爻， 帮我分析投稿文章能中的概率`;
+  const prompt = buildPrompt();
 
   try {
     const res = await fetch('https://api.deepseek.com/chat/completions', {
