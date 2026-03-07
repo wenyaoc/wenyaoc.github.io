@@ -67,13 +67,13 @@ type: page
 <input type="text" id="paper-name" placeholder="Enter paper name">
 
 <label for="area">Area</label>
-<input type="text" id="area" placeholder="e.g. Computer Vision, NLP, Robotics">
+<input type="text" id="area" placeholder="e.g. Programming Language, Software Engineering">
 
-<label for="submission-date">Submission Date</label>
-<input type="date" id="submission-date">
+<label for="release-date">AOE Result Release Date</label>
+<input type="date" id="release-date">
 
 <label for="conference">Conference</label>
-<input type="text" id="conference" placeholder="e.g. NeurIPS, CVPR, ICML">
+<input type="text" id="conference" placeholder="e.g. POPL, PLDI">
 
 <div id="current-time"></div>
 
@@ -84,8 +84,11 @@ type: page
 </div>
 
 <script>
+function formatChinese(d) {
+  return d.getFullYear() + '年' + (d.getMonth()+1) + '月' + d.getDate() + '日';
+}
 function updateTime() {
-  document.getElementById('current-time').textContent = 'Current time: ' + new Date().toLocaleString();
+  document.getElementById('current-time').textContent = 'Current time: ' + formatChinese(new Date());
 }
 updateTime();
 setInterval(updateTime, 1000);
@@ -94,9 +97,10 @@ async function submitQuery() {
   const apiKey = document.getElementById('api-key').value.trim();
   const paperName = document.getElementById('paper-name').value.trim();
   const area = document.getElementById('area').value.trim();
-  const submissionDate = document.getElementById('submission-date').value;
+  const releaseDateRaw = document.getElementById('release-date').value;
   const conference = document.getElementById('conference').value.trim();
-  const currentTime = new Date().toLocaleString();
+  const currentTime = formatChinese(new Date());
+  const releaseDate = releaseDateRaw ? formatChinese(new Date(releaseDateRaw + 'T00:00:00')) : '';
 
   if (!apiKey) { alert('Please enter your DeepSeek API key.'); return; }
   if (!paperName) { alert('Please enter the paper name.'); return; }
@@ -107,13 +111,8 @@ async function submitQuery() {
   btn.textContent = 'Loading...';
   responseBox.textContent = 'Waiting for response...';
 
-  const prompt = `Paper Name: ${paperName}
-Area: ${area}
-Submission Date: ${submissionDate}
-Conference: ${conference}
-Current Time: ${currentTime}
-
-Please provide a detailed review and analysis of this paper submission.`;
+  const prompt = `现在是 ${currentTime}, 我们投的 ${conference} 文章， 关于 ${area}, 名字叫 ${paperName}. AOE ${releaseDate} 出结果。
+请你用六爻， 帮我分析投稿文章能中的概率`;
 
   try {
     const res = await fetch('https://api.deepseek.com/chat/completions', {
@@ -125,7 +124,7 @@ Please provide a detailed review and analysis of this paper submission.`;
       body: JSON.stringify({
         model: 'deepseek-chat',
         messages: [
-          { role: 'system', content: 'You are a helpful academic assistant that reviews and analyzes paper submissions.' },
+          { role: 'system', content: '你是一位命理大师，精通奇门遁甲，紫微斗数，梅花易数，八字和六爻等，并且熟读周易和易经。' },
           { role: 'user', content: prompt }
         ],
         temperature: 0.7
