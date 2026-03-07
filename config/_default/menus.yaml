@@ -19,9 +19,6 @@ main:
   - name: Publications
     url: '#featured'
     weight: 50
-  - name: Deepseek Dashi
-    url: chendashi/
-    weight: 60
   # - name: Contact
   #   url: '#contact'
   #   weight: 60
