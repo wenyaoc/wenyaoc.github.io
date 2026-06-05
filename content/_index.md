@@ -280,10 +280,4 @@ sections:
   #         captcha: false
   #   design:
   #     columns: '2'
-  - block: markdown
-    content:
-      title: ''
-      text: '<p style="text-align:center;font-size:0.85rem;margin-top:2rem;"><a href="deepseek-dashi/">Deepseek Dashi</a></p>'
-    design:
-      columns: '1'
 ---
