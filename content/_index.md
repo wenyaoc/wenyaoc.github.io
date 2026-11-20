@@ -3,6 +3,8 @@
 title: ''
 date: 2022-10-24
 type: landing
+design:
+  css_class: homepage-with-background
 
 sections:
   - block: hero

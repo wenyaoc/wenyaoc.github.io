@@ -1,3 +1,47 @@
 .ul-edu li .description p.course {
   white-space: nowrap;
 }
+
+.homepage-with-background {
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: 55vw;
+    max-width: 84.23vh;
+    background: url("../media/homepage-background.jpg") 55% center / auto 100% no-repeat;
+    mask-image: linear-gradient(to right, transparent, #000 25%);
+    opacity: 0.20;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  > .page-body > .home-section {
+    background-color: transparent;
+
+    &:nth-of-type(even) {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+  }
+
+  &.dark::before {
+    opacity: 0.12;
+  }
+
+  &.dark > .page-body > .home-section {
+    background-color: rgba(255, 255, 255, 0.02);
+
+    &:nth-of-type(even) {
+      background-color: transparent;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    &::before {
+      width: 72vw;
+      opacity: 0.13;
+    }
+  }
+}
