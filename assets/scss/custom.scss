@@ -27,6 +27,8 @@
   }
 
   &.dark::before {
+    max-width: 46.91vh;
+    background-image: url("../media/homepage-background-dark.jpg");
     opacity: 0.12;
   }
 
